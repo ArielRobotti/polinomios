@@ -5,7 +5,7 @@ def polinomio(coef, deriv=0, x=None):
 			coefDeriv.append((len(coef)-i-1)*j)
 		coef=coefDeriv
 	if x==None:
-		return coe
+		return coef
 	else:
 		valor=0
 		for i,j in enumerate(reversed(coef)):
