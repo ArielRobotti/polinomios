@@ -1,15 +1,14 @@
 def polinomio(coef, deriv=0, x=None):
-	coefSal=coef
 	for i in range(deriv):
 		coefDeriv=[]
-		for i,j in enumerate(coefSal[:-1]):
-			coefDeriv.append((len(coefSal)-i-1)*j)
-		coefSal=coefDeriv
+		for i,j in enumerate(coef[:-1]):
+			coefDeriv.append((len(coef)-i-1)*j)
+		coef=coefDeriv
 	if x==None:
-		return coefSal
+		return coe
 	else:
 		valor=0
-		for i,j in enumerate(reversed(coefSal)):
+		for i,j in enumerate(reversed(coef)):
 			valor+= x**i*j
 		return valor
 #ejemplos...			
