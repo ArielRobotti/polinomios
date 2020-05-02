@@ -1,4 +1,11 @@
 def polinomio(coef, deriv=0, x=None):
+	if deriv>len(coef)-2: 		
+		if deriv==len(coef)-1:
+			sal=1
+			for i in range (2,deriv+1):
+				sal*=i
+			return coef[0]*sal
+		return 0	
 	for i in range(deriv):
 		coefDeriv=[]
 		for i,j in enumerate(coef[:-1]):
@@ -11,6 +18,7 @@ def polinomio(coef, deriv=0, x=None):
 		for i,j in enumerate(reversed(coef)):
 			valor+= x**i*j
 		return valor
+
 #ejemplos...			
 c=(2,3,2.5,-2,0.5,-7)	#coeficientes
 der1=polinomio(c,deriv=1)
